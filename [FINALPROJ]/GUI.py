@@ -41,7 +41,7 @@ def sign_up():
     sign_up_window = tk.Toplevel(root)
     sign_up_window.title("Sign Up")
     sign_up_window.geometry("350x250")
-    sign_up_window.configure(bg="#f0f0f0")  # Set background color of the window
+    sign_up_window.configure(bg="#ADD8E6")  # Set background color of the window
     
     fields = ["First Name", "Middle Name", "Last Name", "Birthday (YYYY-MM-DD)"]  # Define form fields
     entries = []  # List to store entry widgets for user input
@@ -70,7 +70,7 @@ def view_records():
     view_window = tk.Toplevel(root)  # Create a new window
     view_window.title("All Records")
     view_window.geometry("500x300")
-    view_window.configure(bg="#f0f0f0")  # Set background color of the window
+    view_window.configure(bg="#ADD8E6")  # Set background color of the window
     
     # Create a treeview widget to display records in tabular format
     tree = ttk.Treeview(view_window, columns=("First Name", "Middle Name", "Last Name", "Birthday", "Gender"), show="headings")
@@ -122,7 +122,7 @@ def search_record():
     search_window = tk.Toplevel(root)
     search_window.title("Search Record")
     search_window.geometry("300x150")
-    search_window.configure(bg="#f0f0f0")  # Set background color
+    search_window.configure(bg="#ADD8E6")  # Set background color
     
     ttk.Label(search_window, text="Enter name to search:").pack(pady=5)  # Label for search field
     search_entry = ttk.Entry(search_window)  # Create search entry field
@@ -138,13 +138,13 @@ def exit_program():
 root = tk.Tk()  # Create the main window
 root.title("User Management System")  # Set window title
 root.geometry("400x300")  # Set window size
-root.configure(bg="#e0e0e0")  # Set background color of the window
+root.configure(bg="#ADD8E6")  # Set background color of the window
 
 frame = ttk.Frame(root, padding=20)  # Create a frame to hold buttons and labels
 frame.pack(expand=True)  # Position the frame in the window
 
 # Add labels and buttons to the main window
-ttk.Label(frame, text="User Management System", font=("Arial", 14, "bold")).pack(pady=10)
+ttk.Label(frame, text="User Management System", font=("Poppins", 18, "bold")).pack(pady=10)
 ttk.Button(frame, text="Sign Up", command=sign_up, width=30).pack(pady=5)
 ttk.Button(frame, text="View All Records", command=view_records, width=30).pack(pady=5)
 ttk.Button(frame, text="Search a Record", command=search_record, width=30).pack(pady=5)
